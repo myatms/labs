@@ -5,5 +5,5 @@ services:
 before_install:
    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 script:
-   - docker build -t myatminsoe/demoapp:v2
+   - docker build -t myatminsoe/demoapp:v2 .
    - docker push myatminsoe/demoapp:v2
